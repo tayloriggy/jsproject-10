@@ -17,14 +17,10 @@ Steps:
 
 */
 
-
-function RandRecipe(){
-    
-}
-
 function newRandRec(){
     axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
         .then(function (response) {
-            return response.data;
+            return response.json;
+
         })
 }
