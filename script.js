@@ -18,9 +18,10 @@ Steps:
 */
 
 function newRandRec(){
+
     axios.get("https://www.themealdb.com/api/json/v1/1/random.php/idMeal")
         .then(function (response) {
-            console.log(response);
+                console.log('idMeal', response.data);
         })
 
 }
