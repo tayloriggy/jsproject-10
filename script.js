@@ -18,9 +18,9 @@ Steps:
 */
 
 function newRandRec(){
-    axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    axios.get("https://www.themealdb.com/api/json/v1/1/random.php/idMeal")
         .then(function (response) {
-            return response.json;
-
+            console.log(response);
         })
+
 }
