@@ -43,29 +43,6 @@ function setImage(image){
     document.getElementById("image").src = image.strMealThumb;
 }
 
-/*
-strIngredient1: "Water",
-  strIngredient10: "Basil",
-  strIngredient11: "Black Pepper",
-  strIngredient12: "",
-  strIngredient13: "",
-  strIngredient14: "",
-  strIngredient15: "",
-  strIngredient16: "",
-  strIngredient17: "",
-  strIngredient18: "",
-  strIngredient19: "",
-  strIngredient2: "Sugar",
-  strIngredient20: "",
-  strIngredient3: "Yeast",
-  strIngredient4: "Plain Flour",
-  strIngredient5: "Salt",
-  strIngredient6: "Olive Oil",
-  strIngredient7: "Passata",
-  strIngredient8: "Mozzarella",
-  strIngredient9:
-*/
-
 function setIngredients(ings){
     document.getElementById("ingredients").innerHTML = ings.strIngredient1;
 }
