@@ -44,8 +44,20 @@ function setImage(image){
 }
 
 function setIngredients(ings){
-    document.getElementById("ingredients").innerHTML = ings.strIngredient1;
+    document.getElementById("first").innerHTML = ings.strIngredient1;
+    document.getElementById("second").innerHTML = ings.strIngredient2;
+    document.getElementById("third").innerHTML = ings.strIngredient3;
+    document.getElementById("fourth").innerHTML = ings.strIngredient4;
+    document.getElementById("fifth").innerHTML = ings.strIngredient5;
+
+
 }
+
+/*
+strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "
+strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10", "strIngredient11", "strIngredient12", "strIngredient13", 
+"strIngredient14", "strIngredient15", "strIngredient16", "strIngredient17", "strIngredient18", "strIngredient19", "strIngredient20",
+*/
 
 function setSteps(steps){
     document.getElementById("instructions").innerHTML = steps.strInstructions;
