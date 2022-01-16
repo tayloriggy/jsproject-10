@@ -25,7 +25,7 @@ function randRec(){
 
     axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
         .then(function (response) {
-            const data = response.data.meals[0];
+            const data = response.data.meals[0]; //creating a var called data and setting it to the response(API endpoint line 26), and 
             setRecipeTitle(data);
             setImage(data);
             setIngredients(data);
@@ -49,6 +49,26 @@ function setIngredients(ings){
     document.getElementById("third").innerHTML = ings.strIngredient3;
     document.getElementById("fourth").innerHTML = ings.strIngredient4;
     document.getElementById("fifth").innerHTML = ings.strIngredient5;
+    document.getElementById("six").innerHTML = ings.strIngredient6;
+    document.getElementById("seven").innerHTML = ings.strIngredient7;
+    document.getElementById("eight").innerHTML = ings.strIngredient8;
+    document.getElementById("nine").innerHTML = ings.strIngredient9;
+    document.getElementById("ten").innerHTML = ings.strIngredient10;
+    document.getElementById("eleven").innerHTML = ings.strIngredient11;
+    document.getElementById("twelve").innerHTML = ings.strIngredient12;
+    document.getElementById("thirteen").innerHTML = ings.strIngredient13;
+    document.getElementById("fourteen").innerHTML = ings.strIngredient14;
+    document.getElementById("fifteen").innerHTML = ings.strIngredient15;
+    document.getElementById("sixteen").innerHTML = ings.strIngredient16;
+    document.getElementById("seventeen").innerHTML = ings.strIngredient17;
+    document.getElementById("eighteen").innerHTML = ings.strIngredient18;
+    document.getElementById("nineteen").innerHTML = ings.strIngredient19;
+    document.getElementById("twenty").innerHTML = ings.strIngredient20;
+
+
+
+
+
 
 
 }
