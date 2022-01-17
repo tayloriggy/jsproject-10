@@ -16,7 +16,9 @@ Steps:
 -call each function within newRandRec(data) 
 -call function newRandRec(data) at end to reset webpage for new rand rec with onclick event on "new recipe" button
 -use inner.HTML to push each key value to UI
--define empty tag shells in html and set ID to each to grab id with getElementById
+-define empty tag shells in html and set ID to each to grab id with getElementById 
+-in setIngredients(), use for loop to loop through each number behind strIngredient and then create li element 
+which then gets appended to UI via the ul element's id
 
 
 */
@@ -25,7 +27,8 @@ function randRec(){
 
     axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
         .then(function (response) {
-            const data = response.data.meals[0]; //creating a var called data and setting it to the response(API endpoint line 26), and 
+            const data = response.data.meals[0]; //creating a var called data and setting it to the response(API endpoint line 26), represents
+            // the data object, then meals object at index 0 which is the data we're after
             setRecipeTitle(data);
             setImage(data);
             setIngredients(data);
@@ -44,26 +47,13 @@ function setImage(image){
 }
 
 function setIngredients(ings){
-    document.getElementById("first").innerHTML = ings.strIngredient1;
-    document.getElementById("second").innerHTML = ings.strIngredient2;
-    document.getElementById("third").innerHTML = ings.strIngredient3;
-    document.getElementById("fourth").innerHTML = ings.strIngredient4;
-    document.getElementById("fifth").innerHTML = ings.strIngredient5;
-    document.getElementById("six").innerHTML = ings.strIngredient6;
-    document.getElementById("seven").innerHTML = ings.strIngredient7;
-    document.getElementById("eight").innerHTML = ings.strIngredient8;
-    document.getElementById("nine").innerHTML = ings.strIngredient9;
-    document.getElementById("ten").innerHTML = ings.strIngredient10;
-    document.getElementById("eleven").innerHTML = ings.strIngredient11;
-    document.getElementById("twelve").innerHTML = ings.strIngredient12;
-    document.getElementById("thirteen").innerHTML = ings.strIngredient13;
-    document.getElementById("fourteen").innerHTML = ings.strIngredient14;
-    document.getElementById("fifteen").innerHTML = ings.strIngredient15;
-    document.getElementById("sixteen").innerHTML = ings.strIngredient16;
-    document.getElementById("seventeen").innerHTML = ings.strIngredient17;
-    document.getElementById("eighteen").innerHTML = ings.strIngredient18;
-    document.getElementById("nineteen").innerHTML = ings.strIngredient19;
-    document.getElementById("twenty").innerHTML = ings.strIngredient20;
+    for (let i = 1; i <=20; i++){ //using for loop to loop through all values 1-20 in strIngredient keys in mealDB
+        const ingredientKey = "strIngredient" + i; //defining variable and setting it equal to the strIngredient key
+        let li = document.createElement("LI"); //creating li element
+        li.innerHTML = ings[ingredientKey]; //setting li element to html and making it equal to the parameter ings with index of ingredientKey
+        document.getElementById("listIngredients").appendChild(li); //appending li element to ul element in UI
+    }
+    
 
 
 

@@ -4,4 +4,8 @@ div{
     align-content: center;
 }
 
+#listIngredients{
+    list-style-type: none;
+}
+
     
