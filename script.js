@@ -50,24 +50,10 @@ function setIngredients(ings){
     for (let i = 1; i <=20; i++){ //using for loop to loop through all values 1-20 in strIngredient keys in mealDB
         const ingredientKey = "strIngredient" + i; //defining variable and setting it equal to the strIngredient key
         let li = document.createElement("LI"); //creating li element
-        li.innerHTML = ings[ingredientKey]; //setting li element to html and making it equal to the parameter ings with index of ingredientKey
+        li.innerHTML = ings[ingredientKey]; //setting li element to html and making it equal to parameter ings and accessing key through variable by using bracket notation 
         document.getElementById("listIngredients").appendChild(li); //appending li element to ul element in UI
     }
-    
-
-
-
-
-
-
-
 }
-
-/*
-strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "
-strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10", "strIngredient11", "strIngredient12", "strIngredient13", 
-"strIngredient14", "strIngredient15", "strIngredient16", "strIngredient17", "strIngredient18", "strIngredient19", "strIngredient20",
-*/
 
 function setSteps(steps){
     document.getElementById("instructions").innerHTML = steps.strInstructions;
