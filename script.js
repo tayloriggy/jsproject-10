@@ -20,12 +20,15 @@ Steps:
 -in setIngredients(), use for loop to loop through each number behind strIngredient and then create li element 
 which then gets appended to UI via the ul element's id
 
-
 */
+
+const body = document.body; //these two lines handle onload event for when page initally loads and/or is refreshed
+body.onload = randRec;
+
 
 function randRec(){
 
-    axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    axios.get("https://www.themealdb.com/api/json/v1/1/random.php") //using axios JS library to make GET request from mealdb API endpoint
         .then(function (response) {
             const data = response.data.meals[0]; //creating a var called data and setting it to the response(API endpoint line 26), represents
             // the data object, then meals object at index 0 which is the data we're after
